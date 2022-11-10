@@ -15,6 +15,7 @@ public class ServerMain {
             System.exit(0);
         }
 
+       
         String local, master;
         int localPort, masterPort;
 
@@ -38,6 +39,7 @@ public class ServerMain {
         Registry localRegistry = null,
                  remoteRegistry = null;
 
+        
         try {
             localRegistry = LocateRegistry.createRegistry(localPort);
             if(!isMaster)
@@ -47,6 +49,7 @@ public class ServerMain {
             e.printStackTrace();
         }
 
+        
 
         if(localRegistry !=null && isMaster) {
             // Create master instance
